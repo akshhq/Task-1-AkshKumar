@@ -3,9 +3,7 @@ const DARK_KEY = 'sd-dark-mode';
 
 function applyDark(isDark) {
   document.documentElement.classList.toggle('dark', isDark);
-  if (document.body) {
-    document.body.classList.toggle('dark', isDark);
-  }
+  document.body.classList.toggle('dark', isDark);
   document.documentElement.style.colorScheme = isDark ? 'dark' : 'light';
   const btn = document.getElementById('darkToggle');
   if (btn) btn.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
@@ -20,12 +18,55 @@ function initDarkMode() {
 
 function toggleDark() {
   const isDark = !document.documentElement.classList.contains('dark');
-  localStorage.setItem(DARK_KEY, String(isDark));
+  localStorage.setItem(DARK_KEY, isDark);
   applyDark(isDark);
 }
 
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initDarkMode, { once: true });
+  document.addEventListener('DOMContentLoaded', initDashboard, { once: true });
 } else {
+  initDashboard();
+}
+
+// Mobile Nav Toggle
+function initNavToggle() {
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  if (!toggle || !links) return;
+
+  toggle.addEventListener('click', () => {
+    links.classList.toggle('open');
+  });
+
+  links.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => links.classList.remove('open'));
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      links.classList.remove('open');
+    }
+  });
+
+  document.addEventListener('click', event => {
+    if (!links.classList.contains('open')) return;
+    if (toggle.contains(event.target) || links.contains(event.target)) return;
+    links.classList.remove('open');
+  });
+}
+
+// Active Nav Link
+function setActiveNav() {
+  const page = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-link a, .nav-links a').forEach(link => {
+    const href = link.getAttribute('href');
+    link.classList.toggle('active', href === page);
+  });
+}
+
+// Init
+function initDashboard() {
   initDarkMode();
+  initNavToggle();
+  setActiveNav();
 }
