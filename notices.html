@@ -3,9 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Notice |  Student Dashboard</title>
+    <meta name="description" content="Student Dashboard as Internship task">
+    <meta name="author" content="Aksh Kumar">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <nav class="navbar">
+        <span class="nav-brand">STUDENT HUB</span>
+        <ul class="nav-link" id="navLinks">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="assignments.html">Assignments</a></li>
+            <li><a href="notices.html">Notices</a></li>
+            <li><a href="timetable.html">Timetable</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="attendance.html">Attendance</a></li>
+        </ul>
+        <button class="dark-toggle" id="darkToggle" onclick="toggleDark()">DARK MODE</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+            <span></span><span></span>
+        </button>
+    </nav>
     
+    <script src="script.js"></script>
 </body>
 </html>
