@@ -1,32 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notice |  Student Dashboard</title>
-    <meta name="description" content="Student Dashboard as Internship task">
-    <meta name="author" content="Aksh Kumar">
-    <script src="theme-init.js"></script>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notices – Student Portal</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-    <nav class="navbar">
-        <span class="nav-brand">STUDENT HUB</span>
-        <ul class="nav-link" id="navLinks">
+
+  <nav class="navbar">
+    <span class="nav-brand">📚 StudentHub</span>
+    <ul class="nav-link" id="navLinks">
             <li><a href="index.html">Dashboard</a></li>
+            <li><a href="timetable.html">Timetable</a></li>
             <li><a href="assignments.html">Assignments</a></li>
             <li><a href="notices.html">Notices</a></li>
-            <li><a href="timetable.html">Timetable</a></li>
-            <li><a href="profile.html">Profile</a></li>
-            <li><a href="attendance.html">Attendance</a></li>
         </ul>
-        <button class="dark-toggle" id="darkToggle" onclick="toggleDark()">DARK MODE</button>
-        <button class="nav-toggle" id="navToggle" aria-label="Menu">
-            <span></span><span></span>
-        </button>
-    </nav>
-    
-    <script src="script.js"></script>
+    <button class="dark-toggle" id="darkToggle" onclick="toggleDark()">🌙 Dark Mode</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main class="page">
+    <div class="page-header">
+      <h1>Notices</h1>
+      <p>4 new notices from the administration</p>
+    </div>
+
+    <div class="cards" style="flex-direction: column;">
+
+      <div class="card notice-card">
+        <div class="notice-icon">📋</div>
+        <div class="notice-body">
+          <h3>Exam Form Submission Open</h3>
+          <p>Students of Semester 3 are required to fill and submit the exam form before 30th June. Late submissions will not be accepted.</p>
+          <span class="date">📅 Posted: 18 June 2025</span>
+        </div>
+      </div>
+
+      <div class="card notice-card">
+        <div class="notice-icon">🏅</div>
+        <div class="notice-body">
+          <h3>Sports Week Registration Open</h3>
+          <p>Annual Sports Week will be held from 5–10 July. Register for your preferred events at the sports office by 28th June.</p>
+          <span class="date">📅 Posted: 17 June 2025</span>
+        </div>
+      </div>
+
+      <div class="card notice-card">
+        <div class="notice-icon">🏖️</div>
+        <div class="notice-body">
+          <h3>Holiday Notice – 21st June</h3>
+          <p>The college will remain closed on 21st June 2025 on account of International Yoga Day. Regular classes resume on 23rd June.</p>
+          <span class="date">📅 Posted: 16 June 2025</span>
+        </div>
+      </div>
+
+      <div class="card notice-card">
+        <div class="notice-icon">🧪</div>
+        <div class="notice-body">
+          <h3>Internal Assessment Schedule Released</h3>
+          <p>The schedule for Internal Assessment (IA-2) has been uploaded on the college portal. Students are advised to check and prepare accordingly.</p>
+          <span class="date">📅 Posted: 14 June 2025</span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>

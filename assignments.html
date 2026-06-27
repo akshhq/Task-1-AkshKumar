@@ -1,32 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment | Student Dashboard</title>
-    <meta name="description" content="Student Dashboard as Internship task">
-    <meta name="author" content="Aksh Kumar">
-    <script src="theme-init.js"></script>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignments – Student Portal</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-    <nav class="navbar">
-        <span class="nav-brand">STUDENT HUB</span>
-        <ul class="nav-link" id="navLinks">
+  <nav class="navbar">
+    <span class="nav-brand">📚 StudentHub</span>
+    <ul class="nav-link" id="navLinks">
             <li><a href="index.html">Dashboard</a></li>
+            <li><a href="timetable.html">Timetable</a></li>
             <li><a href="assignments.html">Assignments</a></li>
             <li><a href="notices.html">Notices</a></li>
-            <li><a href="timetable.html">Timetable</a></li>
-            <li><a href="profile.html">Profile</a></li>
-            <li><a href="attendance.html">Attendance</a></li>
         </ul>
-        <button class="dark-toggle" id="darkToggle" onclick="toggleDark()">DARK MODE</button>
-        <button class="nav-toggle" id="navToggle" aria-label="Menu">
-            <span></span><span></span>
-        </button>
-    </nav>
-    
-    <script src="script.js"></script>
+    <button class="dark-toggle" id="darkToggle" onclick="toggleDark()">🌙 Dark Mode</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main class="page">
+    <div class="page-header">
+      <h1>Assignments</h1>
+      <p>Track your pending and submitted work</p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card assignment-card">
+        <h3>📐 DS Assignment 2</h3>
+        <p class="due">📅 Due: 25 June 2025</p>
+        <span class="badge badge-pending">⏳ Pending</span>
+      </div>
+
+      <div class="card assignment-card">
+        <h3>💻 OS Lab Report</h3>
+        <p class="due">📅 Due: 28 June 2025</p>
+        <span class="badge badge-pending">⏳ Pending</span>
+      </div>
+
+      <div class="card assignment-card">
+        <h3>🤖 AI Case Study</h3>
+        <p class="due">📅 Due: 20 June 2025</p>
+        <span class="badge badge-submitted">✅ Submitted</span>
+      </div>
+
+      <div class="card assignment-card">
+        <h3>🗄️ Data Mining Project</h3>
+        <p class="due">📅 Due: 15 June 2025</p>
+        <span class="badge badge-overdue">❌ Overdue</span>
+      </div>
+
+      <div class="card assignment-card">
+        <h3>🌐 Networks Assignment</h3>
+        <p class="due">📅 Due: 30 June 2025</p>
+        <span class="badge badge-submitted">✅ Submitted</span>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
